@@ -22,6 +22,12 @@ subprojects {
             }
         }
     }
+    configurations.configureEach {
+        resolutionStrategy.dependencySubstitution {
+            substitute module("dev.rikka.hidden:compat") using project(":compat")
+            substitute module("dev.rikka.hidden:stub") using project(":stub")
+        }
+    }
 }
 
 apply from: 'api/manifest.gradle'

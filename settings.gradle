@@ -79,3 +79,9 @@ project(':server-shared').projectDir = file("$root${File.separator}server-shared
 
 include ':hidden-api-stub'
 project(':hidden-api-stub').projectDir = file("$root${File.separator}hidden-api-stub")
+
+include ':stub'
+project(':stub').projectDir = file("hidden-api${File.separator}stub")
+
+include ':compat'
+project(':compat').projectDir = file("hidden-api${File.separator}compat")
